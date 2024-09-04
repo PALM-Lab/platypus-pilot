@@ -482,8 +482,8 @@ var save_stroop_data = {
 	action: "save",
 	experiment_id: expID,
 	filename: fileID +`_stroop-data.csv`,
-	wait_message: "<p>Saving data. Please do not close this page.</p>",
-	data_string: ()=>jsPsych.data.get().csv()
+	data_string: ()=>jsPsych.data.get().csv(),
+	wait_message: "<p>Saving data. Please do not close this page.</p>"
 }
 
 // Put timeline together
@@ -823,11 +823,8 @@ var save_flanker_data = {
 	action: "save",
 	experiment_id: expID,
 	filename: fileID + `_flanker-data.csv`,
-	data_string: ()=>jsPsych.data.get().csv(),
-	on_start: function() {
-		var subject = jsPsych.data.get().last(1).values()[0].participant_id
-		return subject
-	}
+	wait_message: "<p>Saving data. Please do not close this page.</p>",
+	data_string: ()=>jsPsych.data.get().csv()
 };
 
 // Put timeline together
@@ -1150,6 +1147,7 @@ var save_simon_data = {
 	action: "save",
 	experiment_id: expID,
 	filename: fileID + `_simon-data.csv`,
+	wait_message: "<p>Saving data. Please do not close this page.</p>",
 	data_string: ()=>jsPsych.data.get().csv()
 };
 
@@ -1168,7 +1166,8 @@ var conclusion = {
 			  '<p> Multiple Arrows Task: ' + total_flanker + ' points</p>' +
 			  '<p> Single Arrow Task: ' + total_simon + ' points</p>' +
 			  '<p style="font-size:25px;">You are now finished with this set of tasks.</p>' +
-              '<p style="font-size:25px;"><b> Press any key to exit.</b></p>' }
+              '<p style="font-size:25px;"><b> Press the button below to exit.</b></p>' },
+	choices: ">>"
 }
 
 var exit_fullscreen = {
