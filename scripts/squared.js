@@ -186,7 +186,7 @@ var main_stroop = jsPsych.randomization.sampleWithReplacement(items_stroop, 500)
 // 3a.1
 var instructions_stroop_1 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: left;'>See what color the top word is. Select that color from the two options below. DON'T<br>
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>See what color the top word is. Select that color from the two options below. DON'T<br>
 				pay attention to what the top word says or the color of the two options below. It's<br>
 				important to match the color of the top word with the meaning of the word below.<br>
 				We will begin with a practice round. You will have 30 seconds to earn as many points<br>
@@ -247,7 +247,7 @@ var threetwoone = {
 // 3d.1
 var instructions_stroop_2 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: left;'>That's it for practice. Please review the instructions one last time. See what color the top<br>
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>That's it for practice. Please review the instructions one last time. See what color the top<br>
 				word is. Select that color from the two options below. DON'T pay attention to what<br>
 				the top word says or the color of the two options below. It's important to match the<br>
 				color of the top word with the meaning of the word below. You will have 90 seconds<br>
