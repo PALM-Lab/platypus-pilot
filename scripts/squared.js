@@ -7,6 +7,8 @@
 			- Descriptions in Burgoyne et al. are slightly different from the implementation in the program available on the Engle Lab website, VL
 			  decided to stick to Burgoyne et al. description because it gave participants feedback at the end and provided reason for why the correct
 			  response was correct
+2024-09-03: Edits made by Ngiam
+			- Added compatibility with DataPipe. This allows the task to be hosted on Github Pages and for data to be sent straight to OSF following completion.
 
 References:
 Liceralde, V.R.T. & Burgoyne, A.P. (2023). Squared tasks of attention control for jsPsych (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.8313315
@@ -103,6 +105,14 @@ var enter_fullscreen = {
 	type: jsPsychFullscreen,
 	fullscreen_mode: true
 }
+
+var resize = {
+    type: jsPsychResize,
+    item_width: 3 + 3/8,
+    item_height: 2 + 1/8,
+    prompt: "<p>Click and drag the lower right corner of the box until the box is the same size as a credit card held up to the screen.</p>",
+    pixels_per_unit: 150
+};
 
 var get_participant_id = {
 	type: jsPsychSurveyText,
@@ -1184,5 +1194,5 @@ var preload = {
 	images: [al, ar, ml_fr, mr_fl, rarr, larr]
 }
 
-timeline.push(preload, get_participant_id, welcome, enter_fullscreen, stroop_task, flanker_task, simon_task, conclusion, exit_fullscreen);
+timeline.push(preload, get_participant_id, welcome, enter_fullscreen, resize, stroop_task, flanker_task, simon_task, conclusion, exit_fullscreen);
 jsPsych.run(timeline);
