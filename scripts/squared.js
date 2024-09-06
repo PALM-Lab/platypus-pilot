@@ -319,7 +319,7 @@ var createStroopBlock = function(stroop) {
 
 			return [choice1, choice2];
 		},
-		margin_horizontal: '53px',
+		margin_horizontal: '20px',
 		on_start: function() {
 			// Set up timer if it's the first trial
 			if (block_trial_count == 0) {
@@ -399,7 +399,7 @@ var createStroopBlock = function(stroop) {
 
 			return [choice1, choice2];
 		},
-		margin_horizontal: '53px',
+		margin_horizontal: '20px',
 		on_start: function() {
 			block_trial_count++
 		},
@@ -975,7 +975,7 @@ var createSimonBlock = function(simon) {
 
 			return [choice1, choice2];
 		},
-		margin_horizontal: '30px',
+		margin_horizontal: '20px',
 		on_start: function() {
 			// Set up timer if it's the first trial
 			if (block_trial_count == 0) {
@@ -1051,7 +1051,7 @@ var createSimonBlock = function(simon) {
 
 			return [choice1, choice2];
 		},
-		margin_horizontal: '30px',
+		margin_horizontal: '20px',
 		on_start: function() {
 			block_trial_count++
 		},
