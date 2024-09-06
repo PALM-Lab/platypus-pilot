@@ -546,7 +546,7 @@ var main_flanker = jsPsych.randomization.sampleWithReplacement(items_flanker, 50
 // 3a.1
 var instructions_flanker_1 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: center;'>In this task, your goal is to select which option has the same <strong>middle arrow</strong> as the <strong>outer arrows</strong> of the set above.
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>In this task, your goal is to select the option has the same <strong>middle arrow</strong> as the <strong>outer arrows</strong> of the set above.
 				Try to score as many points as possible: +1 for a correct answer, -1 for an incorrect answer.
 				We will start with a 30 second practice round.</p>
 				<span style='font-size: 9pt;'>OUTSIDE ARROWS ARE POINTING LEFT</span><br>
@@ -652,8 +652,8 @@ var createFlankerBlock = function(flanker) {
 		stimulus: function() { return display_flanker(flanker[block_trial_count]); },
 		choices: function() { return [stimuli_flanker[flanker[block_trial_count]].resp1, stimuli_flanker[flanker[block_trial_count]].resp2]; },
 		button_html: function() {
-			var choice1 = '<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000;"><div style="color: black; font-size: 34pt; font-weight: 200;">_</div><img src=%choice% width="290"></button>'
-			var choice2 = '<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000;"><div style="color: black; font-size: 34pt; font-weight: 200;">_</div><img src=%choice% width="290"></button>'
+			var choice1 = '<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000;"><div style="color: black; font-size: 34pt; font-weight: 200;">_</div><img src=%choice% width="250"></button>'
+			var choice2 = '<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000;"><div style="color: black; font-size: 34pt; font-weight: 200;">_</div><img src=%choice% width="250"></button>'
 
 			return [choice1, choice2];
 		},
@@ -727,8 +727,8 @@ var createFlankerBlock = function(flanker) {
 					break;
 			}
 
-			var choice1 = '<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000; color: #0000FF;">' + feedback1 + '<img src=%choice% width="290"></button>'
-			var choice2 = '<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000; color: #0000FF;">' + feedback2 + '<img src=%choice% width="290"></button>'
+			var choice1 = '<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000; color: #0000FF;">' + feedback1 + '<img src=%choice% width="250"></button>'
+			var choice2 = '<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000; color: #0000FF;">' + feedback2 + '<img src=%choice% width="250"></button>'
 
 			return [choice1, choice2];
 		},
@@ -867,8 +867,8 @@ var instructions_simon_1 = {
 				<span style='font-size: 9pt; text-align: left;'>ARROW IS POINTING LEFT</span><br>
 				<span style='display: flex; justify-content: left;'><img src='` + larr + `' height='70'></span><p></p>
 				<div style='height: 50px;'></div>
-				<div><button class="choiceStyle" style="font-family: Open SANS; color: white; font-weight: 1000;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div>RIGHT<div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Meaning doesn't match direction of arrow)</div></button><div class="space"></div>
-				<button class="choiceStyle" style="font-family: Open Sans; color: white; font-weight: 1000;"><div style="color: #1ED760; font-size: 34pt; font-weight: 200;">&#10004;</div>LEFT<div style="font-size: 9pt; color: white; font-weight: normal;">RIGHT ANSWER<br>(Meaning matches direction of arrow)</div></button></div>`,
+				<div><button class="choiceStyle" style="font-family: Open SANS; color: white; font-weight: 1000;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div><div style='test-align: center'>RIGHT</div><div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Meaning doesn't match direction of arrow)</div></button><div class="space"></div>
+				<button class="choiceStyle" style="font-family: Open Sans; color: white; font-weight: 1000;"><div style="color: #1ED760; font-size: 34pt; font-weight: 200;">&#10004;</div><div style='test-align: center'>LEFT<div style="font-size: 9pt; color: white; font-weight: normal;">RIGHT ANSWER<br>(Meaning matches direction of arrow)</div></button></div>`,
 	choices: ["Begin practice"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
 	on_finish: function(data) {
@@ -1170,5 +1170,5 @@ var preload = {
 	images: [al, ar, ml_fr, mr_fl, rarr, larr]
 }
 
-timeline.push(preload, get_participant_id, welcome, enter_fullscreen, browser_check, stroop_task, flanker_task, simon_task, conclusion, exit_fullscreen);
+timeline.push(preload, get_participant_id, welcome, enter_fullscreen, browser_check, simon_task, flanker_task, stroop_task, flanker_task, simon_task, conclusion, exit_fullscreen);
 jsPsych.run(timeline);
