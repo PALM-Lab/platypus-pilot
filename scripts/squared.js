@@ -192,14 +192,11 @@ var main_stroop = jsPsych.randomization.sampleWithReplacement(items_stroop, 500)
 // 3a.1
 var instructions_stroop_1 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: center;'>See what color the top word is. Select that color from the two options below. DON'T<br>
-				pay attention to what the top word says or the color of the two options below. It's<br>
-				important to match the color of the top word with the meaning of the word below.<br>
-				We will begin with a practice round. You will have 30 seconds to earn as many points<br>
-				as possible.</p>
-				<div style='height: 100px;'></div>
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>In this task, your goal is to select which option has the same <strong>meaning</strong> as the <strong>color</strong> of the word above.
+				Try to score as many points as possible: +1 for a correct answer, -1 for an incorrect answer.
+				We will start with a 30 second practice round.</p>
 				<p style='font-size: 9pt;'>WORD IS IN BLUE COLOR</p>
-				<span style='font-size: 54pt; font-weight: 1000; color: #0000FF;'>RED</span><p><br></p>
+				<span style='font-size: 54pt; font-weight: 1000; color: #0000FF;'>RED</span><p></p>
 				<div><button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000; color: #0000FF;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div>RED<div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Meaning does not match top word's color)</div></button><div class="space"></div>
 				<button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000; color: #ff0302;"><div style="color: #1ED760; font-size: 34pt; font-weight: 200;">&#10004;</div>BLUE<div style="font-size: 9pt; color: white; font-weight: normal;">RIGHT ANSWER<br>(Meaning matches top word's color)</div></button></div>`,
 	choices: ["Begin practice"],
@@ -212,7 +209,7 @@ var instructions_stroop_1 = {
 // 3a.2
 var prepare_practice_stroop = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_stroop + "</b></span></div></div><div style='height: 150px;'></div>" +
+	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_stroop + "</b></span></div></div>" +
 				"<p style='font-size: 54pt; font-weight: 1000; color: black;'>_</p>" ,
 	choices: ["Review instructions again", "Start practice trials"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
@@ -242,7 +239,7 @@ var intro_stroop = {
 var threetwoone = {
 	timeline: [{
 		type: jsPsychHtmlKeyboardResponse,
-		stimulus: function() { return "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>0</b></span></div></div><div style='height: 89px;'></div>" +
+		stimulus: function() { return "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>0</b></span></div></div>" +
 					"<p style='font-size: 120pt; font-weight: 1000;'>" + jsPsych.timelineVariable("num") + "</p>" },
 		choices: "NO_KEYS",
 		trial_duration: 1000
@@ -253,12 +250,8 @@ var threetwoone = {
 // 3d.1
 var instructions_stroop_2 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: center;'>That's it for practice. Please review the instructions one last time. See what color the top<br>
-				word is. Select that color from the two options below. DON'T pay attention to what<br>
-				the top word says or the color of the two options below. It's important to match the<br>
-				color of the top word with the meaning of the word below. You will have 90 seconds<br>
-				to earn as many points as possible.</p>
-				<div style='height: 100px;'></div>
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>That's it for practice. Remember to select the option which has the same <strong>meaning</strong> as the <strong>color</strong> of the word above.
+				You have 90 seconds to score as many points as possbile.</p>
 				<p style='font-size: 9pt;'>WORD IS IN BLUE COLOR</p>
 				<span style='font-size: 54pt; font-weight: 1000; color: #0000FF;'>RED</span><p><br></p>
 				<div><button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000; color: #0000FF;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div>RED<div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Meaning does not match top word's color)</div></button><div class="space"></div>
@@ -273,7 +266,7 @@ var instructions_stroop_2 = {
 // 3d.2
 var prepare_main_stroop = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_stroop + "</b></span></div></div><div style='height: 150px;'></div>" +
+	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_stroop + "</b></span></div></div>" +
 				"<p style='font-size: 54pt; font-weight: 1000; color: black;'>_</p>",
 	choices: ["Review instructions again", "Start task"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
@@ -305,8 +298,8 @@ var display_stroop = function(stimulus) {
 	var stim = stimuli_stroop[stimulus].stim;
 	var stimcolor = stimuli_stroop[stimulus].stimcolor;
 
-	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_stroop + "</b></span></div></div><div style='height: 143px;'></div>" +
-	"<span style='font-size: 54pt; font-weight: 1000; color: " + stimcolor + ";'>" + stim + "</span><p><br></p>"
+	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_stroop + "</b></span></div></div><div style='height: 30px;'></div>" +
+	"<span style='font-size: 54pt; font-weight: 1000; color: " + stimcolor + ";'>" + stim + "</span><p></p>"
 }
 
 
@@ -880,7 +873,6 @@ var instructions_simon_1 = {
 	stimulus: `<p style='font-size: 15pt; text-align: left;'>Arrows will appear below, on the right or the left. You must click the response option that<br>
 				says which direction the arrow is pointing. We will begin with a practice round. You<br>
 				will have 30 seconds to earn as many points as possible.</p>
-				<div style='height: 100px;'></div>
 				<span style='font-size: 9pt; text-align: left;'>ARROW IS POINTING LEFT</span><br>
 				<span style='display: flex; justify-content: left;'><img src='` + larr + `' height='70'></span><p></p>
 				<div style='height: 50px;'></div>

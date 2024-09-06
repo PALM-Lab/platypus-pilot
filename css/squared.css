@@ -29,14 +29,14 @@ body {
 
 .space {
     width: 90px; /* 300 for stroop; 150px for flanker */
-    height: auto;
+    height: min-content;
     display: inline-block;
 }
 
 .choiceStyle {
 	background-color: black; 
 	/* border: 2px solid white; */
-    width: 305px; /* 200px for stroop; 350px for flanker */;
+    width: 200px; /* 200px for stroop; 350px for flanker */;
 	/* color: white; 
 	padding: 5px 10px; */
 	text-align: center;
@@ -49,6 +49,7 @@ body {
 
 .defaultButton {
     width: 250px; 
+    height: min-content;
     padding: 10px 10px; 
     font-size: 12pt; 
     background-color: #d0d0d0;
@@ -65,3 +66,13 @@ body {
 .jspsych-display-element {
     color: white;
 }
+
+#jspsych-html-button-response-stimulus {
+    width: 800px;
+    height: min-content;
+  }
+
+  #jspsych-html-button-response-btngroup {
+    width: 800px;
+    height: min-content;
+  }
