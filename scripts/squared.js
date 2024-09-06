@@ -251,7 +251,7 @@ var threetwoone = {
 var instructions_stroop_2 = {
 	type: jsPsychHtmlButtonResponse,
 	stimulus: `<p style='font-size: 15pt; text-align: center;'>That's it for practice. Remember to select the option which has the same <strong>meaning</strong> as the <strong>color</strong> of the word above.
-				You have 90 seconds to score as many points as possbile.</p>
+				You have 90 seconds to score as many points as possible.</p>
 				<p style='font-size: 9pt;'>WORD IS IN BLUE COLOR</p>
 				<span style='font-size: 54pt; font-weight: 1000; color: #0000FF;'>RED</span><p><br></p>
 				<div><button class="choiceStyle" style="font-family: Open Sans; font-weight: 1000; color: #0000FF;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div>RED<div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Meaning does not match top word's color)</div></button><div class="space"></div>
@@ -546,13 +546,9 @@ var main_flanker = jsPsych.randomization.sampleWithReplacement(items_flanker, 50
 // 3a.1
 var instructions_flanker_1 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: left;'>See what direction the outside arrows are pointing. From the two options below<br>
-				select the one that has the middle arrow pointing in that direction. DON'T pay<br>
-				attention to the direction of the top middle arrow or the outside arrow direction of<br>
-				the two options below. It's important to match the top outside arrow direction with<br>
-				the middle arrow direction of the options below. We will begin with a practice round.<br>
-				You will have 30 seconds to earn as many points as possible.</p>
-				<div style='height: 75px;'></div>
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>In this task, your goal is to select which option has the same <strong>middle arrow</strong> as the <strong>outer arrows</strong> of the set above.
+				Try to score as many points as possible: +1 for a correct answer, -1 for an incorrect answer.
+				We will start with a 30 second practice round.</p>
 				<span style='font-size: 9pt;'>OUTSIDE ARROWS ARE POINTING LEFT</span><br>
 				<img src='` + mr_fl + `' width='290'><p><br></p>
 				<div><button class="choiceStyle" style="font-family: Open Sans;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div><img src='` + mr_fl + `' width='290'><div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Inside arrow is right)</div></button><div class="space"></div>
@@ -567,7 +563,7 @@ var instructions_flanker_1 = {
 // 3a.2
 var prepare_practice_flanker = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_flanker + "</b></span></div></div><div style='height: 150px;'></div>" +
+	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_flanker + "</b></span></div></div>" +
 				"<p style='font-size: 54pt; font-weight: 1000; color: black;'>_</p>",
 	choices: ["Review instructions again", "Start practice trials"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
@@ -596,13 +592,8 @@ var intro_flanker = {
 // 3d.1
 var instructions_flanker_2 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: left;'>That's it for practice. Please review the instructions one last time. See what direction the<br>
-				outside arrows are pointing. From the two options below select the one that has the<br>
-				middle arrow pointing in that direction. DON'T pay attention to the direction of the<br>
-				top middle arrow or the outside arrow direction of the two options below. It's<br>
-				important to match the top outside arrow direction with the middle arrow direction of<br>
-				the options below. You will have 90 seconds to earn as many points as possible.</p>
-				<div style='height: 75px;'></div>
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>That's it for practice. Remember to select the option which has the same <strong>middle arrow</strong> as the <strong>outer arrows</strong> of the image above.
+				You have 90 seconds to score as many points as possible.</p>
 				<span style='font-size: 9pt;'>OUTSIDE ARROWS ARE POINTING LEFT</span><br>
 				<img src='` + mr_fl + `' width='290'><p><br></p>
 				<div><button class="choiceStyle" style="font-family: Open Sans;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div><img src='` + mr_fl + `' width='290'><div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Inside arrow is right)</div></button><div class="space"></div>
@@ -617,7 +608,7 @@ var instructions_flanker_2 = {
 // 3d.2
 var prepare_main_flanker = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_flanker + "</b></span></div></div><div style='height: 150px;'></div>" +
+	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_flanker + "</b></span></div></div>" +
 				"<p style='font-size: 54pt; font-weight: 1000; color: black;'>_</p>",
 	choices: ["Review instructions again", "Start task"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
@@ -648,7 +639,7 @@ var premain_flanker = {
 var display_flanker = function(stimulus) {
 	var stim = stimuli_flanker[stimulus].stim;
 
-	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_flanker + "</b></span></div></div><div style='height: 130px;'></div>" +
+	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_flanker + "</b></span></div></div>" +
 	"<img src='" + stim + "' width='290'><p><br></p>"
 }
 
@@ -666,7 +657,7 @@ var createFlankerBlock = function(flanker) {
 
 			return [choice1, choice2];
 		},
-		margin_horizontal: '53px',
+		margin_horizontal: '20px',
 		on_start: function() {
 			// Set up timer if it's the first trial
 			if (block_trial_count == 0) {
@@ -741,7 +732,7 @@ var createFlankerBlock = function(flanker) {
 
 			return [choice1, choice2];
 		},
-		margin_horizontal: '53px',
+		margin_horizontal: '20px',
 		on_start: function() {
 			block_trial_count++
 		},
@@ -870,9 +861,9 @@ var main_simon = jsPsych.randomization.sampleWithReplacement(items_simon, 500);
 // 3a.1
 var instructions_simon_1 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: left;'>Arrows will appear below, on the right or the left. You must click the response option that<br>
-				says which direction the arrow is pointing. We will begin with a practice round. You<br>
-				will have 30 seconds to earn as many points as possible.</p>
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>In this task, your goal is to select which option says the <strong>direction</strong> the arrow is pointing, not <strong>which side</strong> of the screen it is on.
+				Try to score as many points as possible: +1 for a correct answer, -1 for an incorrect answer.
+				We will start with a 30 second practice round.</p>
 				<span style='font-size: 9pt; text-align: left;'>ARROW IS POINTING LEFT</span><br>
 				<span style='display: flex; justify-content: left;'><img src='` + larr + `' height='70'></span><p></p>
 				<div style='height: 50px;'></div>
@@ -888,7 +879,7 @@ var instructions_simon_1 = {
 // 3a.2
 var prepare_practice_simon = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_simon + "</b></span></div></div><div style='height: 150px;'></div>" +
+	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_simon + "</b></span></div></div>" +
 				"<p style='font-size: 54pt; font-weight: 1000; color: black;'>_</p>",
 	choices: ["Review instructions again", "Start practice trials"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
@@ -917,11 +908,8 @@ var intro_simon = {
 // 3d.1
 var instructions_simon_2 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: left;'>That's it for practice. Please review the instructions one last time. Arrows will appear<br>
-				below on the right or the left. You must click the response option that says which<br>
-				direction the arrow is pointing. You have 90 seconds to earn as many points as<br>
-				possible.</p>
-				<div style='height: 75px;'></div>
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>That's it for practice. Remember to select the option which says which <strong>direction</strong> the arrow is pointing, not <strong>which side</strong> of the screen it is on.
+				You have 90 seconds to score as many points as possible.</p>
 				<span style='font-size: 9pt; text-align: left;'>ARROW IS POINTING LEFT</span><br>
 				<span style='display: flex; justify-content: left;'><img src='` + larr + `' height='70'></span><p></p>
 				<div style='height: 50px;'></div>
@@ -937,7 +925,7 @@ var instructions_simon_2 = {
 // 3d.2
 var prepare_main_simon = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_simon + "</b></span></div></div><div style='height: 150px;'></div>" +
+	stimulus: "<div style='font-size: 10pt; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_simon + "</b></span></div></div>" +
 				"<p style='font-size: 54pt; font-weight: 1000; color: black;'>_</p>",
 	choices: ["Review instructions again", "Start task"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
@@ -969,7 +957,7 @@ var display_simon = function(stimulus) {
 	var stim = stimuli_simon[stimulus].stim;
 	var loc = stimuli_simon[stimulus].loc;
 
-	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_simon + "</b></span></div></div><div style='height: 128px;'></div>" +
+	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_simon + "</b></span></div></div><div style='height: 10px;'></div>" +
 	"<span style='display: flex; justify-content: " + loc + ";'><img src='" + stim + "' height='70'></span><p></p>" +
 	"<div style='height: 50px;'></div>"
 }
@@ -987,7 +975,7 @@ var createSimonBlock = function(simon) {
 
 			return [choice1, choice2];
 		},
-		margin_horizontal: '53px',
+		margin_horizontal: '30px',
 		on_start: function() {
 			// Set up timer if it's the first trial
 			if (block_trial_count == 0) {
@@ -1063,7 +1051,7 @@ var createSimonBlock = function(simon) {
 
 			return [choice1, choice2];
 		},
-		margin_horizontal: '53px',
+		margin_horizontal: '30px',
 		on_start: function() {
 			block_trial_count++
 		},

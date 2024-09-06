@@ -36,7 +36,7 @@ body {
 .choiceStyle {
 	background-color: black; 
 	/* border: 2px solid white; */
-    width: 200px; /* 200px for stroop; 350px for flanker */;
+    width: 300px; /* 200px for stroop; 350px for flanker */;
 	/* color: white; 
 	padding: 5px 10px; */
 	text-align: center;
