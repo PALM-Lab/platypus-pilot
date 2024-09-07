@@ -103,6 +103,7 @@ var timeline = [];
 
 var enter_fullscreen = {
 	type: jsPsychFullscreen,
+	message: "<p>Please set your device's screen rotation to landscape (making sure portrait orientation lock is off). The experiment will switch to full screen mode when you press the button below.</p>",
 	fullscreen_mode: true
 }
 
@@ -298,7 +299,7 @@ var display_stroop = function(stimulus) {
 	var stim = stimuli_stroop[stimulus].stim;
 	var stimcolor = stimuli_stroop[stimulus].stimcolor;
 
-	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_stroop + "</b></span></div></div><div style='height: 30px;'></div>" +
+	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_stroop + "</b></span></div></div>" +
 	"<span style='font-size: 54pt; font-weight: 1000; color: " + stimcolor + ";'>" + stim + "</span><p></p>"
 }
 
@@ -867,8 +868,8 @@ var instructions_simon_1 = {
 				<span style='font-size: 9pt; text-align: left;'>ARROW IS POINTING LEFT</span><br>
 				<span style='display: flex; justify-content: left;'><img src='` + larr + `' height='70'></span><p></p>
 				<div style='height: 50px;'></div>
-				<div><button class="choiceStyle" style="font-family: Open SANS; color: white; font-weight: 1000;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div><div style='test-align: center'>RIGHT</div><div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Meaning doesn't match direction of arrow)</div></button><div class="space"></div>
-				<button class="choiceStyle" style="font-family: Open Sans; color: white; font-weight: 1000;"><div style="color: #1ED760; font-size: 34pt; font-weight: 200;">&#10004;</div><div style='test-align: center'>LEFT<div style="font-size: 9pt; color: white; font-weight: normal;">RIGHT ANSWER<br>(Meaning matches direction of arrow)</div></button></div>`,
+				<div><button class="choiceStyle" style="font-family: Open SANS; color: white; font-weight: 1000;"><div style="color: red; font-size: 34pt; font-weight: 200;">&#10008;</div><div style='text-align: center'>RIGHT</div><div style="font-size: 9pt; color: white; font-weight: normal;">WRONG ANSWER<br>(Meaning doesn't match direction of arrow)</div></button><div class="space"></div>
+				<button class="choiceStyle" style="font-family: Open Sans; color: white; font-weight: 1000;"><div style="color: #1ED760; font-size: 34pt; font-weight: 200;">&#10004;</div><div style='text-align: center'>LEFT<div style="font-size: 9pt; color: white; font-weight: normal;">RIGHT ANSWER<br>(Meaning matches direction of arrow)</div></button></div>`,
 	choices: ["Begin practice"],
 	button_html: `<div style='height: 70px;'></div><button class="defaultButton">%choice%</button>`,
 	on_finish: function(data) {
