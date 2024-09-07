@@ -1146,7 +1146,7 @@ var simon_task = {timeline: [intro_simon, threetwoone, block_simon_practice, pre
 
 // Ending screen
 var conclusion = {
-    type: jsPsychHtmlKeyboardResponse,
+    type: jsPsychHtmlButtonResponse,
     stimulus: function() { return '<p style="font-size:25px;"> You earned the following points in the three tasks: <br>' +
 	          '<p> Colors Task: ' + total_stroop + ' points</p>' +
 			  '<p> Multiple Arrows Task: ' + total_flanker + ' points</p>' +
