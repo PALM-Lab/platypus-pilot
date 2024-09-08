@@ -547,7 +547,7 @@ var main_flanker = jsPsych.randomization.sampleWithReplacement(items_flanker, 50
 // 3a.1
 var instructions_flanker_1 = {
 	type: jsPsychHtmlButtonResponse,
-	stimulus: `<p style='font-size: 15pt; text-align: center;'>In this task, your goal is to select the option has the same <strong>middle arrow</strong> as the <strong>outer arrows</strong> of the set above.
+	stimulus: `<p style='font-size: 15pt; text-align: center;'>In this task, your goal is to select the option at the bottom of the screen that has the same <strong>middle arrow</strong> as the <strong>outer arrows</strong> of the set above.
 				Try to score as many points as possible: +1 for a correct answer, -1 for an incorrect answer.
 				We will start with a 30 second practice round.</p>
 				<span style='font-size: 9pt;'>OUTSIDE ARROWS ARE POINTING LEFT</span><br>
@@ -640,7 +640,7 @@ var premain_flanker = {
 var display_flanker = function(stimulus) {
 	var stim = stimuli_flanker[stimulus].stim;
 
-	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: baseline;'>Score<br><span style='font-size:27pt;'><b>" + total_flanker + "</b></span></div></div>" +
+	return "<div style='font-size: 10pt; position: relative; left: 5%; display: flex; align-items: center;'>Time left<div id = 'countdownbar' style = 'margin: 0px 25px;'><div id = 'timeleft'></div></div><div style='align-self: center;'>Score<br><span style='font-size:27pt;'><b>" + total_flanker + "</b></span></div></div>" +
 	"<img src='" + stim + "' width='290'><p><br></p>"
 }
 
@@ -1171,5 +1171,5 @@ var preload = {
 	images: [al, ar, ml_fr, mr_fl, rarr, larr]
 }
 
-timeline.push(preload, get_participant_id, welcome, enter_fullscreen, browser_check, simon_task, flanker_task, stroop_task, flanker_task, simon_task, conclusion, exit_fullscreen);
+timeline.push(preload, get_participant_id, welcome, enter_fullscreen, browser_check, flanker_task, stroop_task, flanker_task, simon_task, conclusion, exit_fullscreen);
 jsPsych.run(timeline);
