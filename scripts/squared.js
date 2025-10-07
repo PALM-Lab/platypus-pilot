@@ -44,7 +44,7 @@ To Use:
 var jsPsych = initJsPsych({});
 
 // Add experiment ID to pipe.jspsych.org
-const expID = "edYxHCAnvl6X"
+const expID = "R7sIwTrQsSLz"
 const fileID = `${jsPsych.randomization.randomID(10)}`
 
 // Set the seed for reproducible experiment runs. Use a different seed for a different fixed randomized order.
@@ -1150,9 +1150,6 @@ var conclusion = {
     type: jsPsychHtmlButtonResponse,
     stimulus: function() { return '<p style="font-size:25px;"> You earned the following points in the three tasks: <br>' +
 	          '<p> Colors Task: ' + total_stroop + ' points</p>' +
-			  '<p> Multiple Arrows Task: ' + total_flanker + ' points</p>' +
-			  '<p> Single Arrow Task: ' + total_simon + ' points</p>' +
-			  '<p style="font-size:25px;">You are now finished with this set of tasks.</p>' +
               '<p style="font-size:25px;"><b> Press the button below to exit.</b></p>' },
 	choices: ">>"
 }
@@ -1171,5 +1168,5 @@ var preload = {
 	images: [al, ar, ml_fr, mr_fl, rarr, larr]
 }
 
-timeline.push(preload, get_participant_id, welcome, enter_fullscreen, browser_check, stroop_task, flanker_task, simon_task, conclusion, exit_fullscreen);
+timeline.push(preload, get_participant_id, welcome, enter_fullscreen, browser_check, stroop_task, conclusion, exit_fullscreen);
 jsPsych.run(timeline);
